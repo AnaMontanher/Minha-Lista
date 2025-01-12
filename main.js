@@ -10,12 +10,23 @@ function clickar(event) {
   event.preventDefault();
   const novoItem = campoInput.value;
 
-  if (novoItem!=="") {
+  if (novoItem !== "") {
     const novoItemLista = document.createElement("li");
     novoItemLista.textContent = novoItem;
     listaValores.appendChild(novoItemLista);
+    novoItemLista.setAttribute("class", "item");
     campoInput.value = "";
-    console.log ("botão clicado!")
   }
 }
+
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+    console.log('clicado')
+  }
+}, false);
+
+
+
 adicionarLista();

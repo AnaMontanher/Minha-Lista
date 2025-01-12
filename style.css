@@ -53,6 +53,11 @@ li {
   padding: 5px 0;
 }
 
+
+ul li.checked{
+  text-decoration: line-through;
+}
+
 @media (max-width: 1108px) {
   .container {
     width: 80%;
